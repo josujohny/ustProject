@@ -1,0 +1,134 @@
+<body>
+                <!-- <ul>
+                                <li><a class="active">Welcome to GroceryCart</a></li>
+                                <li style="float:right"><button type="button" class="btn btn-success" (click)="logout()">logout</button></li>
+                              </ul> -->
+
+        <div align="center">
+            <div style="width:15cm"><br><br>
+                <h2>GroceryCart SignUp</h2><br>
+        
+                <form class="form-container" role="form" #form="ngForm" autocomplete="off">
+                    <!-- <div class="imgcontainer">
+                        <img width="3cm" src="data:image/jpeg;base64,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" alt="Avatar" class="avatar">
+                    </div> -->
+        
+                    <div class="container">
+                        <label for="uname"><b>First Name</b></label>
+                        <div class="input">
+                                
+                                <input type="text" id="fname" placeholder="Enter Your First Name" name="fname" class="form-control" required pattern="[a-zA-Z]+"  [(ngModel)]="fname" #fnames="ngModel" >
+                          
+                                <div *ngIf="fnames.invalid && (fnames.dirty || fnames.touched) && fnames.errors.required" class="validation-error" style="color: red;" >
+                                       First name is required.
+                                </div>
+                                <div *ngIf="fnames.invalid && (fnames.dirty || fnames.touched) && fnames.errors.pattern" class="validation-error" style="color: red;" >
+                                        names should be alphabet
+                                </div>
+                            
+                        </div>
+                        <label for="uname"><b>Last Name</b></label>
+                        <div class="input">
+                                
+                                <input type="text" id="lname" placeholder="Enter Your Last Name" name="lname" class="form-control" required pattern="[a-zA-Z]+"  [(ngModel)]="lname" #lnames="ngModel" >
+                          
+                                <div *ngIf="lnames.invalid && (lnames.dirty || lnames.touched) && lnames.errors.required" class="validation-error" style="color: red;" >
+                                       Last name is required.
+                                </div>
+                                <div *ngIf="lnames.invalid && (lnames.dirty || lnames.touched) && lnames.errors.pattern" class="validation-error" style="color: red;" >
+                                                names should be alphabet
+                                </div>
+                            
+                        </div>
+
+                        <label for="uname"><b>Username</b></label>
+                        <div class="input">
+                                
+                                <input type="text" id="name" placeholder="Enter Username" name="name" class="form-control" required [(ngModel)]="name" #names="ngModel" >
+               
+                                <div *ngIf="names.invalid && (names.dirty || names.touched) && names.errors.required" class="validation-error" style="color: red;">
+                                       UserName is required.
+                                </div>
+                                <!-- <div *ngIf="names.invalid && (names.dirty || names.touched) && names.errors.minlength" class="validation-error" style="color: red;">
+                                       Name is required with minlength 4.
+                                </div> -->
+                            </div>
+        
+                        <label for="psw"><b>Password</b></label>
+                        <div class="input">
+                                
+                                <input type="password" id="password" placeholder="Enter password" name="password" class="form-control" required minlength="8" [(ngModel)]="password" #passwords="ngModel" >
+                          
+                                <div *ngIf="passwords.invalid && (passwords.dirty || passwords.touched) && passwords.errors.required" class="validation-error" style="color: red;" >
+                                        Password is required.
+                                </div>
+                                <div *ngIf="passwords.invalid && (passwords.dirty || passwords.touched) && passwords.errors.minlength" class="validation-error" style="color: red;" >
+                                        Password is required with minlength 8.
+                                </div>
+                            
+                             </div>
+                             <label for="psw"><b>Confirm Password</b></label>
+                        <div class="input">
+                                
+                                <input type="password" id="password" placeholder="ReEnter password" name="cpassword" class="form-control" required minlength="8" [(ngModel)]="cpassword" #cpasswords="ngModel" >
+                          
+                                <div *ngIf="cpasswords.invalid && (cpasswords.dirty || cpasswords.touched) && cpasswords.errors.required" class="validation-error" style="color: red;" >
+                                        Password is required.
+                                </div>
+                                <div *ngIf="cpasswords.invalid && (cpasswords.dirty || cpasswords.touched) && cpasswords.errors.minlength" class="validation-error" style="color: red;" >
+                                        Password is required with minlength 8.
+                                </div>
+                            
+                             </div>
+            
+                        <label for="psw"><b>address</b></label>
+                        <div class="input">
+                                
+                                <input type="text" id="address" placeholder="Enter Your Address" name="address" class="form-control" required [(ngModel)]="address" #addresss="ngModel" >
+                          
+                                <div *ngIf="addresss.invalid && (addresss.dirty || addresss.touched) && addresss.errors.required" class="validation-error" style="color: red;" >
+                                       Address is required.
+                                </div>
+                                <!-- <div *ngIf="addresss.invalid && (addresss.dirty || addresss.touched) && addresss.errors.minlength" class="validation-error" style="color: red;" >
+                                        names is required with minlength 8.
+                                </div> -->
+                            
+                        </div>
+            
+                        
+            
+                        <label for="psw"><b>Phone Number</b></label>
+                        <div class="input">
+                                
+                                        <input type="number" id="phone" placeholder="Enter Phone Number" name="phone" class="form-control" required pattern="[0-9]{10}" [(ngModel)]="phone" #phones="ngModel" >
+                                  
+                                        <div *ngIf="phones.invalid && (phones.dirty || phones.touched) && phones.errors.required" class="validation-error" style="color: red;" >
+                                               phone number is required.
+                                        </div>
+                                        <div *ngIf="phones.invalid && (phones.dirty || phones.touched) && phones.errors.pattern" class="validation-error" style="color: red;" >
+                                                 minlength should be 10.
+                                        </div>
+                                    
+                                </div>
+                                
+                                <label for="psw"><b>Email</b></label>
+                                <div class="input">
+                                
+                                                <input type="email" id="email" placeholder="Enter Your Email" name="email" class="form-control" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" [(ngModel)]="email" #emails="ngModel" >
+                                          
+                                                <div *ngIf="emails.invalid && (emails.dirty || emails.touched) && emails.errors.required" class="validation-error" style="color: red;" >
+                                                       Email is required.
+                                                </div>
+                                                <div *ngIf="emails.invalid && (emails.dirty || emails.touched) && emails.errors.pattern" class="validation-error" style="color: red;" >
+                                                        Email format is incorrect
+                                                </div>
+                                            
+                                        </div>
+                
+                        <button class="btn btn-info btn-block" type="submit" style="background-color:green" [disabled]="form.invalid" (click)="login()">sign up</button>
+        
+                    </div> 
+                </form>
+            </div>
+        </div>
+</body>
